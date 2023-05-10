@@ -1,6 +1,7 @@
 # AWS IoT secure tunneling
 Secure tunneling is used to establish bidirectional communication to remote devices over a secure connection that is managed by AWS IoT. Secure tunneling does not require updates to your existing inbound firewall rules. 
 
+![diagram](./aws-iot-secure-tunneling.jpg)
 [Reference](https://docs.aws.amazon.com/iot/latest/developerguide/secure-tunneling.html)
 
 ## What is secure tunneling?
@@ -57,3 +58,28 @@ As both sides of the tunnel are connected, you can *start an SSH session by usin
 
 The following video describes how secure tunneling works and walks you through the process of setting up an SSH session to a Raspberry Pi device.  
 [![IMAGE ALT TEXT](http://img.youtube.com/vi/Vq67jKZTR-c/0.jpg)](http://www.youtube.com/watch?v=Vq67jKZTR-c "Video Title")
+
+## Secure tunnel lifecycle
+Tunnels can have the status OPEN or CLOSED. Connections to the tunnel can have the status CONNECTED or DISCONNECTED. The following shows how the different tunnel and connection statuses work.
+
+1. When you open a tunnel, it has a status of OPEN. The tunnel's source and destination connection status is set to DISCONNECTED.
+
+2. When a device (source or destination) connects to the tunnel, the corresponding connection status changes to CONNECTED.
+
+3. When a device disconnects from the tunnel while the tunnel status remains OPEN, the corresponding connection status changes back to DISCONNECTED. A device can connect to and disconnect from a tunnel repeatedly as long as the tunnel remains OPEN.
+
+4. When you call `CloseTunnel` or the tunnel remains OPEN for longer than the `MaxLifetimeTimeout` value, a tunnel's status becomes CLOSED. You can configure `MaxLifetimeTimeout` when calling OpenTunnel. `MaxLifetimeTimeout` defaults to 12 hours if you do not specify a value.  
+*Note: A tunnel cannot be reopened when it is CLOSED.*
+
+5. You can call `DescribeTunnel` and `ListTunnels` to view tunnel metadata while the tunnel is visible. The tunnel can be visible in the AWS IoT console for at least three hours before it is deleted.
+
+## Tutorials
+This section focus on creating a tunnel using the AWS Management Console and the AWS IoT API Reference. In the AWS IoT console, you can create a tunnel from the [Tunnels hub](https://console.aws.amazon.com/iot/home#/tunnels) page or from the details page of a thing that you created.
+
+- [Open a tunnel and use browser-based SSH to access remote device](./open_tunnel_method_1.md)  
+This tutorial shows how to open a tunnel from the [Tunnels hub](https://console.aws.amazon.com/iot/home#/tunnels) page using the quick setup method. You'll also learn how to use browser-based SSH to access the remote device using an in-context CLI within the AWS IoT console.
+- [Open a tunnel using manual setup and connect to remote device](./open_tunnel_method_2.md)  
+This tutorial shows how to open a tunnel from the Tunnels hub page using the manual setup method. You'll also learn how to *configure and start the local proxy* from a terminal in your source device and connect to the tunnel.
+
+- [Open a tunnel for remote device and use browser-based SSH](./open_tunnel_method_3.md)  
+This tutorial shows how to open a tunnel from the details page of a thing that you created. You'll learn how to create a new tunnel and use an existing tunnel. The existing tunnel corresponds to the most recent, open tunnel that was created for the device. You can also use the browser-based SSH to access the remote device.
