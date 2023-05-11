@@ -33,9 +33,9 @@
   ![create tunnel](./static/aws-create-tunnel2.jpg)  
   Once tunnel is created, isn't needed to store the tokens. It's going to be sent through MQTT message.
 * Connect through SSH  
-  On Secure Shell(SSH) select *Connect* then *Use private key*.
-  ![create tunnel](./static/aws-create-tunnel3.jpg)
-  Upload the private key and connect.
-  ![create tunnel](./static/aws-connect.jpg)
-  Device Successfully connected!
-  ![create tunnel](./static/aws-connect2.jpg)
+  On Secure Shell(SSH) select *Connect* then *Use private key*.  
+  ![create tunnel](./static/aws-create-tunnel3.jpg)  
+  Upload the private key and connect.  
+  ![create tunnel](./static/aws-connect.jpg)  
+  Device Successfully connected!  
+  ![create tunnel](./static/aws-connect2.jpg)  
