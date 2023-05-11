@@ -1,3 +1,4 @@
+# PREREQUISITES
 ## Linux C++ Compilers
 Many Linux operating systems have C++ compilers installed by default, so you might already clang or gcc preinstalled. To test, try running the following in a new terminal:
 ```BASH
@@ -18,7 +19,7 @@ If your Linux operating system is not in the list, please use a search engine to
 5. Once the install is finished, close the terminal and reopen it.
 6. Confirm GCC is installed by running `gcc --version` or Clang is installed by running `clang --version`.
 
-# Linux CMake
+## Linux CMake
 There are several ways to install CMake depending on the Linux operating system. Several Linux operating systems include CMake in their software repository applications, like the Ubuntu Software Center for example, so you may want to check there first.
 
 **Install CMake on Ubuntu**
