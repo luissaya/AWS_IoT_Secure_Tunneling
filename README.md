@@ -6,12 +6,33 @@
 * AWS IoT Device Client is built on the device([instructions](./docs/AWS_IoT_device_client.md)).
 
 ## Credentials
-* AWS IoT endpoint
+* AWS IoT endpoint 
 * Path to public PEM certificate
 * Path to the private key
 * Path to the ROOT CA certificate
 * Thing name
 
+**For b827ebf379fb**
+* AWS IoT endpoint: 
+  ```BASH
+  a35lkm5jyds64h-ats.iot.us-east-1.amazonaws.com
+  ```
+* Path to public PEM certificate
+  ```BASH
+  /home/fabricio/projects/sdk-workspace/aws-iot-device-client/identity/b827ebf379fb-certificate.pem.crt
+  ```
+* Path to the private key
+  ```BASH
+  /home/fabricio/projects/sdk-workspace/aws-iot-device-client/identity/b827ebf379fb-private.pem.key
+  ```
+* Path to the ROOT CA certificate
+  ```BASH
+  /home/fabricio/projects/sdk-workspace/aws-iot-device-client/identity/b827ebf379fb-CA1.pem
+  ```
+* Thing name
+  ```BASH
+  f2_b827ebf379fb
+  ```
 ## Process
 * Provide the credentials  
   ```BASH

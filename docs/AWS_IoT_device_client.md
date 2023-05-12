@@ -4,9 +4,8 @@
 ## Minimum Requirements
 - C++ 11 or higher
 - CMake 3.10+
-- OpenSSL 1.1.1
 - [aws-iot-device-sdk-cpp-v2](./AWS_IoT_device_sdk_cpp_v2.md) commit hash located in `CMakeLists.txt.awssdk`
-
+- OpenSSL version 3([upgrade process](./OpenSSL_3.md)) 
 ## Quick Start
 ```BASH
 # Building
