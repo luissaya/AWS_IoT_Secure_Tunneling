@@ -1,11 +1,12 @@
-# OpenSSL upgrade process
+# OpenSSL upgrade process and Libssl-dev installation
+## OpenSSL
 OpenSSL is a cryptographic library used for secure communication over networks.
 [Reference](https://linuxhint.com/update-open-ssl-raspberry-pi/)
 * Check OpenSSL version
   ```BASH
   openssl version
   ```
-  The latest version of OpenSSL at the time of writing this file is “3.1.0”
+  The latest version of OpenSSL at the time of writing this file is “3.1.0”  
 * Install dependencies
   ```BASH
   sudo apt install build-essential zlib1g-dev checkinstall -y
@@ -88,6 +89,11 @@ OpenSSL is a cryptographic library used for secure communication over networks.
   ```BASH
   openssl version
   ```
-
+## Libssl-dev
+[Reference](https://packages.debian.org/buster/libssl-dev)
+* Install libssl-dev
+  ```BASH
+  sudo apt-get install libssl-dev
+  ```
 
 

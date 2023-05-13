@@ -3,7 +3,7 @@
 * C++ 11 or higher
 * Clang 3.9+ or GCC 4.8+ or MSVC 2015+
 * CMake 3.1+
-  [Step-by-step](./cpp_requisites.md)
+  [Step-by-step requirements installation](./cpp_requisites.md)
 ## Process
 ```BASH
 # Create a workspace directory to hold all the SDK files

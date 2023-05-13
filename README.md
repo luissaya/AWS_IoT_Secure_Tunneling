@@ -34,10 +34,26 @@
   f2_b827ebf379fb
   ```
 ## Process
-* Provide the credentials  
+* Go into `/aws-iot-device-client`
+  ```BASH
+  mkdir /aws-iot-device-client
+  ```
+* Create a folder `/identity`
+  ```BASH
+  mkdir indentity
+  ```
+* place inside the credentials: PEM certificate, private key and ROOT CA certificate.
+  
+* Change the permissions on each certificate to 700
+  ```BASH
+  sudo chmod 700 ./identity
+  sudo chmod 644 /identity/b827ebf379fb-certificate.pem.crt
+  sudo chmod 600 /identity/b827ebf379fb-private.pem.key
+  sudo chmod 644 /identity/b827ebf379fb-CA1.pem
+  ```
+* Execute the setup file and provide the credentials as needed.  
   ```BASH
   # Setup
-  cd ../
   sudo ./setup.sh # At this point you'll need to respond to prompts for information, including paths to your thing certs
   ```
 * Check if the service is running
