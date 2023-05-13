@@ -19,24 +19,24 @@
   ```
 * Path to public PEM certificate
   ```BASH
-  /home/fabricio/projects/sdk-workspace/aws-iot-device-client/identity/b827ebf379fb-certificate.pem.crt
+  /home/USER/Projects/aws-iot-device-client/identity/b827ebf379fb-certificate.pem.crt
   ```
 * Path to the private key
   ```BASH
-  /home/fabricio/projects/sdk-workspace/aws-iot-device-client/identity/b827ebf379fb-private.pem.key
+  /home/USER/Projects/aws-iot-device-client/identity/b827ebf379fb-private.pem.key
   ```
 * Path to the ROOT CA certificate
   ```BASH
-  /home/fabricio/projects/sdk-workspace/aws-iot-device-client/identity/b827ebf379fb-CA1.pem
+  /home/USER/Projects/aws-iot-device-client/identity/b827ebf379fb-CA1.pem
   ```
 * Thing name
   ```BASH
   f2_b827ebf379fb
   ```
 ## Process
-* Go into `/aws-iot-device-client`
+* Go into:
   ```BASH
-  mkdir /aws-iot-device-client
+  cd /aws-iot-device-client
   ```
 * Create a folder `/identity`
   ```BASH

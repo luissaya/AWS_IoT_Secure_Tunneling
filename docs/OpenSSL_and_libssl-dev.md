@@ -1,4 +1,11 @@
-# OpenSSL upgrade process and Libssl-dev installation
+# OpenSSL and Libssl-dev installation
+## Libssl-dev
+[Reference](https://packages.debian.org/buster/libssl-dev)
+* Install libssl-dev
+  ```BASH
+  sudo apt-get install libssl-dev
+  ```
+
 ## OpenSSL
 OpenSSL is a cryptographic library used for secure communication over networks.
 [Reference](https://linuxhint.com/update-open-ssl-raspberry-pi/)
@@ -6,6 +13,9 @@ OpenSSL is a cryptographic library used for secure communication over networks.
   ```BASH
   openssl version
   ```
+  OpenSSL version 1.1.1 must be enough.
+
+## OpenSSL upgrading (optional)
   The latest version of OpenSSL at the time of writing this file is “3.1.0”  
 * Install dependencies
   ```BASH
@@ -88,12 +98,6 @@ OpenSSL is a cryptographic library used for secure communication over networks.
 * Ensure that OpenSSL is successfully updated
   ```BASH
   openssl version
-  ```
-## Libssl-dev
-[Reference](https://packages.debian.org/buster/libssl-dev)
-* Install libssl-dev
-  ```BASH
-  sudo apt-get install libssl-dev
   ```
 
 
