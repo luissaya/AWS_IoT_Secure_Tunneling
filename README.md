@@ -21,6 +21,11 @@
   ```BASH
   mkdir indentity
   ```
+* *Optional* change permissions to `config-template.json` and the folder that contain this file:
+  ```BASH
+  chmod 745 config/  
+  chmod 640 config/config-file.json
+  ```
 * Change permission to the folder `/identity`
   ```BASH
   sudo chmod 700 ./identity
