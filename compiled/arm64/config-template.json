@@ -1,17 +1,17 @@
 {
 	"endpoint": "a35lkm5jyds64h-ats.iot.us-east-1.amazonaws.com",
-	"cert": "/identity/b827ebf379fb-certificate.pem.crt",
-	"key": "/identity/b827ebf379fb-private.pem.key",
-	"root-ca": "/identity/b827ebf379fb-CA1.pem",
-	"thing-name": "f2_b827ebf379fb",
+	"cert": "./identity/48b02d5a68b5-certificate.pem.crt",
+	"key": "./identity/48b02d5a68b5-private.pem.key",
+	"root-ca": "./identity/48b02d5a68b5-CA1.pem",
+	"thing-name": "f2_48b02d5a68b5",
 	"logging": {
 		"level": "DEBUG",
 		"type": "FILE",
-		"file": "/var/log/aws-iot-device-client/aws-iot-device-client.log"
+		"file": "./log/aws-iot-device-client.log"
 	},
 	"jobs": {
 		"enabled": false,
-		"handler-directory": "/root/.aws-iot-device-client/jobs"
+		"handler-directory": "./jobs"
 	},
 	"tunneling": {
 		"enabled": true
