@@ -13,25 +13,20 @@
 * Thing name
 
 ## Process
-* Go into:
+* Go into `aws-iot-device-client` folder:
   ```BASH
-  cd /aws-iot-device-client
+  cd ~
+  cd projects/aws-iot-device-client
   ```
-* Create a folder `/identity`
+* Create a folder `/identity` and change permission.
   ```BASH
   mkdir indentity
-  ```
-* *Optional* change permissions to `config-template.json` and the folder that contain this file:
-  ```BASH
-  chmod 745 config/  
-  chmod 640 config/config-file.json
-  ```
-* Change permission to the folder `/identity`
-  ```BASH
   sudo chmod 700 ./identity
   ```
-* Place inside the credentials: PEM certificate, private key and ROOT CA certificate.
-  
+* Place inside the folder `identity` the credentials: 
+  - PEM certificate(`*.pem.crt`).
+  - Private key(`*.pem.key`). 
+  - ROOT CA certificate(`*.pem`).
 * Change the permissions on each certificate as follow
   ```BASH
   sudo chmod 644 /identity/certificate.pem.crt
@@ -52,11 +47,11 @@
     #enter endpoint
   a35lkm5jyds64h-ats.iot.us-east-1.amazonaws.com 
   Specify path to public PEM certificate:
-    #enter PEM certificate address
+    #enter PEM certificate full address
   Specify path to private key:
-    #enter private key address
+    #enter private key full address
   Specify path to ROOT CA certificate:
-    #enter ROOT CA 1 certificate address
+    #enter ROOT CA 1 certificate full address
   Specify thing name (Also used as Client ID):
     #enter thing name
   Would you like to configure the logger? y/n
@@ -91,11 +86,11 @@
   n #write n
 
       {
-        "endpoint":	"a35lkm5jyds64h-ats.iot.us-east-1.amazonaws.com",
-        "cert":	"/home/nviidia/Projects/aws-iot-device-client/identity/b827ebf379fb-certificate.pem.crt",
-        "key":	"/home/nviidia/Projects/aws-iot-device-client/identity/b827ebf379fb-private.pem.key",
-        "root-ca":	"/home/nviidia/Projects/aws-iot-device-client/identity/b827ebf379fb-CA1.pem",
-        "thing-name":	"f2_b827ebf379fb",
+        "endpoint":	"**********.iot.us-east-1.amazonaws.com",
+        "cert":	"/home/nviidia/Projects/aws-iot-device-client/identity/certificate.pem.crt",
+        "key":	"/home/nviidia/Projects/aws-iot-device-client/identity/private.pem.key",
+        "root-ca":	"/home/nviidia/Projects/aws-iot-device-client/identity/CA1.pem",
+        "thing-name":	"THING_name",
         "logging":	{
           "level":	"",
           "type":	"FILE",
