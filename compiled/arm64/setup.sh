@@ -23,11 +23,10 @@ else
 fi
 
 ### Config Defaults ###
-CWD=$(pwd)
 CONF_OUTPUT_PATH=${OUTPUT_DIR}aws-iot-device-client.conf
-CERT_DIR=${CWD}/identity/*.pem.crt
-PRIVATE_KEY_DIR=${CWD}/identity/*.pem.key
-ROOT_CA_DIR=${CWD}/identity/*.pem
+CERT_DIR=$(find "$(pwd)" -type f -name "*.pem.crt" 2>/dev/null)
+PRIVATE_KEY_DIR=$(find "$(pwd)" -type f -name "*.pem.key" 2>/dev/null)
+ROOT_CA_DIR=$(find "$(pwd)" -type f -name "*.pem" 2>/dev/null)
 HANDLER_DIR=${OUTPUT_DIR}jobs
 PUBSUB_DIR=${OUTPUT_DIR}pubsub/
 PUB_FILE=${PUBSUB_DIR}publish-file.txt
