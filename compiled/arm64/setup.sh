@@ -27,7 +27,7 @@ CWD=$(pwd)
 CONF_OUTPUT_PATH=${OUTPUT_DIR}aws-iot-device-client.conf
 CERT_DIR=${CWD}/identity/*.pem.crt
 PRIVATE_KEY_DIR=${CWD}/identity/*.pem.key
-ROOT_CA_DIR=${CWD}/identity/*.CA1.pem
+ROOT_CA_DIR=${CWD}/identity/*.pem
 HANDLER_DIR=${OUTPUT_DIR}jobs
 PUBSUB_DIR=${OUTPUT_DIR}pubsub/
 PUB_FILE=${PUBSUB_DIR}publish-file.txt
@@ -56,7 +56,7 @@ if [ "$BUILD_CONFIG" = "y" ]; then
     if [ "$PRIVATE_KEY" ]; then
       PRIVATE_KEY_DIR=$PRIVATE_KEY
     fi
-    printf ${PMPT} "Specify full path to ROOT CA certificate:(Enter for deafult location: ./identity/*.CA1.pem)"
+    printf ${PMPT} "Specify full path to ROOT CA certificate:(Enter for deafult location: ./identity/*.pem)"
     read -r ROOT_CA
     if [ "$ROOT_CA" ]; then
       ROOT_CA_DIR=$ROOT_CA
