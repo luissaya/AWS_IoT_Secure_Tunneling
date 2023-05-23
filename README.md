@@ -1,6 +1,8 @@
 # Connect a Remote IoT Device using Secure Tunneling
 [![IMAGE ALT TEXT](http://img.youtube.com/vi/bRIsuWlzcgs/0.jpg)](http://www.youtube.com/watch?v=bRIsuWlzcgs "Video Title")
 
+*For a simplified fully build method for arm64 go to [Simplified-AWS-Secure-Tunneling](./docs/simplified_aws_iotIsecure_tunneling.md)*
+
 ## Prerequisites
 * AWS IoT Thing created, and the certificate, private key and root CA on the device.
 * AWS IoT Device Client is built on the device([instructions](./docs/AWS_IoT_device_client.md)).
@@ -12,7 +14,7 @@
 * Path to the ROOT CA certificate
 * Thing name
 
-## Process
+## Device Configuration
 * Go into `aws-iot-device-client` folder:
   ```BASH
   cd ~
@@ -175,6 +177,8 @@
   ```BASH
   sudo less /var/log/aws-iot-device-client/aws-iot-device-client.log  
   ```
+
+## AWS configuration
 * Create the tunnel  
   ![create tunnel](./static/aws-create-tunnel.jpg)  
   Select *Create new tunnel* and *Quick setup(SSH)*  
