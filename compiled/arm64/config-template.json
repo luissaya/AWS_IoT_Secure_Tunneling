@@ -1,23 +1,23 @@
 {
-	"endpoint": "a35lkm5jyds64h-ats.iot.us-east-1.amazonaws.com",
-	"cert": "./identity/48b02d5a68b5-certificate.pem.crt",
-	"key": "./identity/48b02d5a68b5-private.pem.key",
-	"root-ca": "./identity/48b02d5a68b5-CA1.pem",
-	"thing-name": "f2_48b02d5a68b5",
+	"endpoint": "<replace_with_endpoint_value>",
+	"cert": "<replace_with_certificate_file_path>",
+	"key": "<replace_with_private_key_file_path>",
+	"root-ca": "<replace_with_root_ca_file_path>",
+	"thing-name": "<replace_with_thing_name/replace_with_client_id>",
 	"logging": {
 		"level": "DEBUG",
 		"type": "FILE",
-		"file": "./log/aws-iot-device-client.log"
+		"file": "/var/log/aws-iot-device-client/aws-iot-device-client.log"
 	},
 	"jobs": {
-		"enabled": false,
-		"handler-directory": "./jobs"
+		"enabled": true,
+		"handler-directory": "<replace_with_job_handler_directory_path>"
 	},
 	"tunneling": {
 		"enabled": true
 	},
 	"device-defender": {
-		"enabled": false,
+		"enabled": true,
 		"interval": 300
 	},
 	"fleet-provisioning": {
@@ -50,7 +50,7 @@
 		"pkcs11-lib": "<replace_with_pkcs11_lib_path>",
 		"secure-element-pin": "<replace_with_secure_element_pin>",
 		"secure-element-key-label": "<replace_with_secure_element_key_label>",
-		"secure-element-slot-id": "<replace_with_secure_element_slot_id_integer>",
+		"secure-element-slot-id": "replace_with_secure_element_slot_id_integer",
 		"secure-element-token-label": "<replace_with_secure_element_token_label>"
 	}
 }
