@@ -47,10 +47,12 @@
   ```BASH
   sudo ./setup.sh
   ```
+  For default configuration:
   - provide credentials (endpoint and thing name, the others verify the addresses)
   - "n" to *Advance configuration*
   - verify the configuration
-  - "n" to *Configure AWS secure tunneling* 
+  - "n" to *Configure AWS secure tunneling*
+  - Press *ENTER*
 * Check if the service is up
   ```BASH
   sudo service aws-iot-device-client status   
@@ -63,7 +65,7 @@
   ```BASH
   sudo less /var/log/aws-iot-device-client/aws-iot-device-client.log  
   ```
-* Follow this default configuration for enable only the aws iot secure tunneling.
+* Example of default configuration for enable only the aws iot secure tunneling.
   ```BASH
   WARNING: Only run this setup script as root if you plan to run the AWS IoT Device Client as root,  or if you plan to run the AWS IoT Device Client as a service. Otherwise, you should run this script as  the user that will execute the client.
   Do you want to interactively generate a configuration file for the AWS IoT Device Client? y/n
